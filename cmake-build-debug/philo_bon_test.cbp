@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="philo_test"/>
+		<Option title="philo_bon_test"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/dwillard/philo_bon_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="philo_test">
-				<Option output="/Users/dwillard/philo_bon_test/cmake-build-debug/philo_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="philo_bon_test">
+				<Option output="/Users/dwillard/philo_bon_test/cmake-build-debug/philo_bon_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/dwillard/philo_bon_test/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -52,14 +52,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/dwillard/philo_bon_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_test"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/dwillard/philo_bon_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_bon_test"/>
 					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/dwillard/philo_bon_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j6 -f &quot;/Users/dwillard/philo_bon_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/dwillard/philo_bon_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="philo_test/fast">
-				<Option output="/Users/dwillard/philo_bon_test/cmake-build-debug/philo_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="philo_bon_test/fast">
+				<Option output="/Users/dwillard/philo_bon_test/cmake-build-debug/philo_bon_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/dwillard/philo_bon_test/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -73,7 +73,7 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/dwillard/philo_bon_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_test/fast"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/dwillard/philo_bon_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_bon_test/fast"/>
 					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/dwillard/philo_bon_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j6 -f &quot;/Users/dwillard/philo_bon_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/dwillard/philo_bon_test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -81,25 +81,25 @@
 			</Target>
 		</Build>
 		<Unit filename="/Users/dwillard/philo_bon_test/philo.h">
-			<Option target="philo_test"/>
+			<Option target="philo_bon_test"/>
 		</Unit>
 		<Unit filename="/Users/dwillard/philo_bon_test/sources/init.c">
-			<Option target="philo_test"/>
+			<Option target="philo_bon_test"/>
 		</Unit>
 		<Unit filename="/Users/dwillard/philo_bon_test/sources/main.c">
-			<Option target="philo_test"/>
+			<Option target="philo_bon_test"/>
 		</Unit>
 		<Unit filename="/Users/dwillard/philo_bon_test/sources/threads.c">
-			<Option target="philo_test"/>
+			<Option target="philo_bon_test"/>
 		</Unit>
 		<Unit filename="/Users/dwillard/philo_bon_test/sources/utils.c">
-			<Option target="philo_test"/>
+			<Option target="philo_bon_test"/>
 		</Unit>
 		<Unit filename="/Users/dwillard/philo_bon_test/sources/utils_2.c">
-			<Option target="philo_test"/>
+			<Option target="philo_bon_test"/>
 		</Unit>
 		<Unit filename="/Users/dwillard/philo_bon_test/sources/watch.c">
-			<Option target="philo_test"/>
+			<Option target="philo_bon_test"/>
 		</Unit>
 		<Unit filename="/Users/dwillard/philo_bon_test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

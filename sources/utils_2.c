@@ -12,49 +12,11 @@
 
 #include <philo.h>
 
-int	free_philo(t_philosopher ***philo)
+int	free_philo(t_philosopher **philo)
 {
-	int		index;
-	t_data	*data;
-
-	data = (*philo)[0]->data;
-	index = 0;
 	if (*philo)
-	{
-		while (index < data->philo_count)
-		{
-			free((*philo)[index]);
-			index++;
-		}
-		free(*philo);
-	}
-	free(data);
-	return (-1);
-}
-
-int	mutex_destroyer(int index, t_philosopher **philo)
-{
-	int	counter;
-
-	counter = 0;
-	if (!index)
-	{
-		while (index < philo[0]->data->philo_count)
-		{
-			pthread_mutex_destroy(&philo[index]->right_fork);
-			index++;
-		}
-		pthread_mutex_destroy(philo[0]->left_fork);
-		pthread_mutex_destroy(&philo[0]->data->writer);
-	}
-	else
-	{
-		while (counter < index)
-			pthread_mutex_destroy(&philo[counter++]->right_fork);
-		pthread_mutex_destroy(&philo[0]->data->writer);
-		free_philo(&philo);
-		return (-1);
-	}
-	free_philo(&philo);
+		free((*philo));
+	*philo = NULL;
+	philo = NULL;
 	return (0);
 }

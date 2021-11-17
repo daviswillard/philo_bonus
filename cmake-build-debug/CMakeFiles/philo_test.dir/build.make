@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dwillard/philo_test
+CMAKE_SOURCE_DIR = /Users/dwillard/philo_bon_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dwillard/philo_test/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/dwillard/philo_bon_test/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/philo_test.dir/depend.make
@@ -68,81 +68,81 @@ include CMakeFiles/philo_test.dir/flags.make
 
 CMakeFiles/philo_test.dir/sources/main.c.o: CMakeFiles/philo_test.dir/flags.make
 CMakeFiles/philo_test.dir/sources/main.c.o: ../sources/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/philo_test.dir/sources/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_test.dir/sources/main.c.o -c /Users/dwillard/philo_test/sources/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/philo_test.dir/sources/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_test.dir/sources/main.c.o -c /Users/dwillard/philo_bon_test/sources/main.c
 
 CMakeFiles/philo_test.dir/sources/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo_test.dir/sources/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_test/sources/main.c > CMakeFiles/philo_test.dir/sources/main.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_bon_test/sources/main.c > CMakeFiles/philo_test.dir/sources/main.c.i
 
 CMakeFiles/philo_test.dir/sources/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_test.dir/sources/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_test/sources/main.c -o CMakeFiles/philo_test.dir/sources/main.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_bon_test/sources/main.c -o CMakeFiles/philo_test.dir/sources/main.c.s
 
 CMakeFiles/philo_test.dir/sources/utils.c.o: CMakeFiles/philo_test.dir/flags.make
 CMakeFiles/philo_test.dir/sources/utils.c.o: ../sources/utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/philo_test.dir/sources/utils.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_test.dir/sources/utils.c.o -c /Users/dwillard/philo_test/sources/utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/philo_test.dir/sources/utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_test.dir/sources/utils.c.o -c /Users/dwillard/philo_bon_test/sources/utils.c
 
 CMakeFiles/philo_test.dir/sources/utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo_test.dir/sources/utils.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_test/sources/utils.c > CMakeFiles/philo_test.dir/sources/utils.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_bon_test/sources/utils.c > CMakeFiles/philo_test.dir/sources/utils.c.i
 
 CMakeFiles/philo_test.dir/sources/utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_test.dir/sources/utils.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_test/sources/utils.c -o CMakeFiles/philo_test.dir/sources/utils.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_bon_test/sources/utils.c -o CMakeFiles/philo_test.dir/sources/utils.c.s
 
 CMakeFiles/philo_test.dir/sources/init.c.o: CMakeFiles/philo_test.dir/flags.make
 CMakeFiles/philo_test.dir/sources/init.c.o: ../sources/init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/philo_test.dir/sources/init.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_test.dir/sources/init.c.o -c /Users/dwillard/philo_test/sources/init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/philo_test.dir/sources/init.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_test.dir/sources/init.c.o -c /Users/dwillard/philo_bon_test/sources/init.c
 
 CMakeFiles/philo_test.dir/sources/init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo_test.dir/sources/init.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_test/sources/init.c > CMakeFiles/philo_test.dir/sources/init.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_bon_test/sources/init.c > CMakeFiles/philo_test.dir/sources/init.c.i
 
 CMakeFiles/philo_test.dir/sources/init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_test.dir/sources/init.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_test/sources/init.c -o CMakeFiles/philo_test.dir/sources/init.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_bon_test/sources/init.c -o CMakeFiles/philo_test.dir/sources/init.c.s
 
 CMakeFiles/philo_test.dir/sources/threads.c.o: CMakeFiles/philo_test.dir/flags.make
 CMakeFiles/philo_test.dir/sources/threads.c.o: ../sources/threads.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/philo_test.dir/sources/threads.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_test.dir/sources/threads.c.o -c /Users/dwillard/philo_test/sources/threads.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/philo_test.dir/sources/threads.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_test.dir/sources/threads.c.o -c /Users/dwillard/philo_bon_test/sources/threads.c
 
 CMakeFiles/philo_test.dir/sources/threads.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo_test.dir/sources/threads.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_test/sources/threads.c > CMakeFiles/philo_test.dir/sources/threads.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_bon_test/sources/threads.c > CMakeFiles/philo_test.dir/sources/threads.c.i
 
 CMakeFiles/philo_test.dir/sources/threads.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_test.dir/sources/threads.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_test/sources/threads.c -o CMakeFiles/philo_test.dir/sources/threads.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_bon_test/sources/threads.c -o CMakeFiles/philo_test.dir/sources/threads.c.s
 
 CMakeFiles/philo_test.dir/sources/watch.c.o: CMakeFiles/philo_test.dir/flags.make
 CMakeFiles/philo_test.dir/sources/watch.c.o: ../sources/watch.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/philo_test.dir/sources/watch.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_test.dir/sources/watch.c.o -c /Users/dwillard/philo_test/sources/watch.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/philo_test.dir/sources/watch.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_test.dir/sources/watch.c.o -c /Users/dwillard/philo_bon_test/sources/watch.c
 
 CMakeFiles/philo_test.dir/sources/watch.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo_test.dir/sources/watch.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_test/sources/watch.c > CMakeFiles/philo_test.dir/sources/watch.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_bon_test/sources/watch.c > CMakeFiles/philo_test.dir/sources/watch.c.i
 
 CMakeFiles/philo_test.dir/sources/watch.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_test.dir/sources/watch.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_test/sources/watch.c -o CMakeFiles/philo_test.dir/sources/watch.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_bon_test/sources/watch.c -o CMakeFiles/philo_test.dir/sources/watch.c.s
 
 CMakeFiles/philo_test.dir/sources/utils_2.c.o: CMakeFiles/philo_test.dir/flags.make
 CMakeFiles/philo_test.dir/sources/utils_2.c.o: ../sources/utils_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/philo_test.dir/sources/utils_2.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_test.dir/sources/utils_2.c.o -c /Users/dwillard/philo_test/sources/utils_2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/philo_test.dir/sources/utils_2.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_test.dir/sources/utils_2.c.o -c /Users/dwillard/philo_bon_test/sources/utils_2.c
 
 CMakeFiles/philo_test.dir/sources/utils_2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo_test.dir/sources/utils_2.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_test/sources/utils_2.c > CMakeFiles/philo_test.dir/sources/utils_2.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_bon_test/sources/utils_2.c > CMakeFiles/philo_test.dir/sources/utils_2.c.i
 
 CMakeFiles/philo_test.dir/sources/utils_2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_test.dir/sources/utils_2.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_test/sources/utils_2.c -o CMakeFiles/philo_test.dir/sources/utils_2.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_bon_test/sources/utils_2.c -o CMakeFiles/philo_test.dir/sources/utils_2.c.s
 
 # Object files for target philo_test
 philo_test_OBJECTS = \
@@ -164,7 +164,7 @@ philo_test: CMakeFiles/philo_test.dir/sources/watch.c.o
 philo_test: CMakeFiles/philo_test.dir/sources/utils_2.c.o
 philo_test: CMakeFiles/philo_test.dir/build.make
 philo_test: CMakeFiles/philo_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/dwillard/philo_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable philo_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable philo_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/philo_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -176,6 +176,6 @@ CMakeFiles/philo_test.dir/clean:
 .PHONY : CMakeFiles/philo_test.dir/clean
 
 CMakeFiles/philo_test.dir/depend:
-	cd /Users/dwillard/philo_test/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/dwillard/philo_test /Users/dwillard/philo_test /Users/dwillard/philo_test/cmake-build-debug /Users/dwillard/philo_test/cmake-build-debug /Users/dwillard/philo_test/cmake-build-debug/CMakeFiles/philo_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/dwillard/philo_bon_test/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/dwillard/philo_bon_test /Users/dwillard/philo_bon_test /Users/dwillard/philo_bon_test/cmake-build-debug /Users/dwillard/philo_bon_test/cmake-build-debug /Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles/philo_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/philo_test.dir/depend
 

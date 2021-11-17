@@ -29,30 +29,19 @@ int	parse_args(int argc, char **argv)
 
 void	start(int argc, char **argv)
 {
-	t_philosopher	**philo;
-	pthread_t		*threads;
-	t_data			*data;
-	int				index;
+	t_data	*data;
+	pid_t	*pid_mass;
 
-	philo = malloc(sizeof(t_philosopher **) * ft_atoi(argv[1]));
-	threads = malloc(sizeof(pthread_t *) * ft_atoi(argv[1]));
-	if (!philo || !threads)
+	data = data_init(argc, argv);
+	pid_mass = malloc(sizeof(pid_t *) * argc);
+	if (!pid_mass || !data)
 	{
-		free_that(philo, threads);
-		return ;
+		sem_unlink("forks");
+		sem_unlink("write");
+		free_that(&data, pid_mass);
+		exit(0);
 	}
-	data = data_init(argc, argv, philo);
-	index = threads_init(data, philo);
-	if (!index)
-		create_threads(threads, philo);
-	index = 0;
-	while (index < data->philo_count)
-	{
-		pthread_join(threads[index], NULL);
-		index++;
-	}
-	mutex_destroyer(0, philo);
-	free_that(NULL, threads);
+	create_procs(pid_mass, data, argc);
 }
 
 int	main(int argc, char **argv)

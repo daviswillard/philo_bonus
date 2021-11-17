@@ -55,18 +55,18 @@ void	ft_usleep(uint64_t delta_t)
 
 void	print(t_philosopher *philo, char *message)
 {
-	int				name;
-	pthread_mutex_t	*writer;
-	uint64_t		time;
+	int			name;
+	sem_t		*writer;
+	uint64_t	time;
 
 	time = get_time() - philo->data->start_time;
-	writer = &philo->data->writer;
+	writer = philo->data->writer;
 	name = philo->name;
 	if (!philo->data->life_status)
 		return ;
-	pthread_mutex_lock(writer);
+	sem_wait(writer);
 	printf("%6llu philosopher %d %s\n", time, name, message);
-	pthread_mutex_unlock(writer);
+	sem_post(writer);
 }
 
 int	free_that(void *this, void *that)

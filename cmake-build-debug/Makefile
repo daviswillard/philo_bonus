@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dwillard/philo_test
+CMAKE_SOURCE_DIR = /Users/dwillard/philo_bon_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dwillard/philo_test/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/dwillard/philo_bon_test/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dwillard/philo_test/cmake-build-debug/CMakeFiles /Users/dwillard/philo_test/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles /Users/dwillard/philo_bon_test/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dwillard/philo_test/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named philo_test
+# Target rules for targets named philo_bon_test
 
 # Build rule for target.
-philo_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 philo_test
-.PHONY : philo_test
+philo_bon_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 philo_bon_test
+.PHONY : philo_bon_test
 
 # fast build rule for target.
-philo_test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/build
-.PHONY : philo_test/fast
+philo_bon_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/build
+.PHONY : philo_bon_test/fast
 
 sources/init.o: sources/init.c.o
 .PHONY : sources/init.o
 
 # target to build an object file
 sources/init.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/init.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/init.c.o
 .PHONY : sources/init.c.o
 
 sources/init.i: sources/init.c.i
@@ -142,7 +142,7 @@ sources/init.i: sources/init.c.i
 
 # target to preprocess a source file
 sources/init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/init.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/init.c.i
 .PHONY : sources/init.c.i
 
 sources/init.s: sources/init.c.s
@@ -150,7 +150,7 @@ sources/init.s: sources/init.c.s
 
 # target to generate assembly for a file
 sources/init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/init.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/init.c.s
 .PHONY : sources/init.c.s
 
 sources/main.o: sources/main.c.o
@@ -158,7 +158,7 @@ sources/main.o: sources/main.c.o
 
 # target to build an object file
 sources/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/main.c.o
 .PHONY : sources/main.c.o
 
 sources/main.i: sources/main.c.i
@@ -166,7 +166,7 @@ sources/main.i: sources/main.c.i
 
 # target to preprocess a source file
 sources/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/main.c.i
 .PHONY : sources/main.c.i
 
 sources/main.s: sources/main.c.s
@@ -174,7 +174,7 @@ sources/main.s: sources/main.c.s
 
 # target to generate assembly for a file
 sources/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/main.c.s
 .PHONY : sources/main.c.s
 
 sources/threads.o: sources/threads.c.o
@@ -182,7 +182,7 @@ sources/threads.o: sources/threads.c.o
 
 # target to build an object file
 sources/threads.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/threads.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/threads.c.o
 .PHONY : sources/threads.c.o
 
 sources/threads.i: sources/threads.c.i
@@ -190,7 +190,7 @@ sources/threads.i: sources/threads.c.i
 
 # target to preprocess a source file
 sources/threads.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/threads.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/threads.c.i
 .PHONY : sources/threads.c.i
 
 sources/threads.s: sources/threads.c.s
@@ -198,7 +198,7 @@ sources/threads.s: sources/threads.c.s
 
 # target to generate assembly for a file
 sources/threads.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/threads.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/threads.c.s
 .PHONY : sources/threads.c.s
 
 sources/utils.o: sources/utils.c.o
@@ -206,7 +206,7 @@ sources/utils.o: sources/utils.c.o
 
 # target to build an object file
 sources/utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/utils.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/utils.c.o
 .PHONY : sources/utils.c.o
 
 sources/utils.i: sources/utils.c.i
@@ -214,7 +214,7 @@ sources/utils.i: sources/utils.c.i
 
 # target to preprocess a source file
 sources/utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/utils.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/utils.c.i
 .PHONY : sources/utils.c.i
 
 sources/utils.s: sources/utils.c.s
@@ -222,7 +222,7 @@ sources/utils.s: sources/utils.c.s
 
 # target to generate assembly for a file
 sources/utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/utils.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/utils.c.s
 .PHONY : sources/utils.c.s
 
 sources/utils_2.o: sources/utils_2.c.o
@@ -230,7 +230,7 @@ sources/utils_2.o: sources/utils_2.c.o
 
 # target to build an object file
 sources/utils_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/utils_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/utils_2.c.o
 .PHONY : sources/utils_2.c.o
 
 sources/utils_2.i: sources/utils_2.c.i
@@ -238,7 +238,7 @@ sources/utils_2.i: sources/utils_2.c.i
 
 # target to preprocess a source file
 sources/utils_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/utils_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/utils_2.c.i
 .PHONY : sources/utils_2.c.i
 
 sources/utils_2.s: sources/utils_2.c.s
@@ -246,7 +246,7 @@ sources/utils_2.s: sources/utils_2.c.s
 
 # target to generate assembly for a file
 sources/utils_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/utils_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/utils_2.c.s
 .PHONY : sources/utils_2.c.s
 
 sources/watch.o: sources/watch.c.o
@@ -254,7 +254,7 @@ sources/watch.o: sources/watch.c.o
 
 # target to build an object file
 sources/watch.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/watch.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/watch.c.o
 .PHONY : sources/watch.c.o
 
 sources/watch.i: sources/watch.c.i
@@ -262,7 +262,7 @@ sources/watch.i: sources/watch.c.i
 
 # target to preprocess a source file
 sources/watch.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/watch.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/watch.c.i
 .PHONY : sources/watch.c.i
 
 sources/watch.s: sources/watch.c.s
@@ -270,7 +270,7 @@ sources/watch.s: sources/watch.c.s
 
 # target to generate assembly for a file
 sources/watch.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_test.dir/build.make CMakeFiles/philo_test.dir/sources/watch.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/watch.c.s
 .PHONY : sources/watch.c.s
 
 # Help Target
@@ -281,7 +281,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... philo_test"
+	@echo "... philo_bon_test"
 	@echo "... sources/init.o"
 	@echo "... sources/init.i"
 	@echo "... sources/init.s"

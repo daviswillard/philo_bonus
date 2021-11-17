@@ -18,6 +18,7 @@
 # include <sys/time.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <semaphore.h>
 
 typedef struct s_data
 {
@@ -30,7 +31,8 @@ typedef struct s_data
 	uint64_t		time_to_die;
 	uint64_t		time_to_eat;
 	uint64_t		start_time;
-	pthread_mutex_t	writer;
+	sem_t			*writer;
+	sem_t			*forks;
 }t_data;
 
 typedef struct s_philosopher
@@ -49,24 +51,20 @@ uint64_t		get_time(void);
 
 int				free_that(void *this, void *that);
 
-int				free_philo(t_philosopher ***philo);
-
-int				mutex_destroyer(int index, t_philosopher **philo);
-
-void			create_threads(pthread_t *threads, t_philosopher **philo);
+int				free_philo(t_philosopher **philo);
 
 void			print(t_philosopher *philo, char *message);
 
 void			ft_usleep(uint64_t delta_t);
 
+t_philosopher	*philo_init(int index, t_data *data);
+
 void			*watch(void *args);
+
+void			create_procs(pid_t *pid_mass, t_data *data, int argc);
 
 void			*dead_announcer(void *args);
 
-t_data			*data_init(int argc, char **argv, t_philosopher **philo);
-
-t_philosopher	*philo_init(int index, t_data *data);
-
-int				threads_init(t_data *data, t_philosopher **philo);
+t_data			*data_init(int argc, char **argv);
 
 #endif

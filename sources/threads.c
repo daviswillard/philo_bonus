@@ -19,44 +19,26 @@ static void	eat(t_philosopher *philo)
 	philo->last_eat = get_time();
 	print(philo, "is eating");
 	ft_usleep(philo->data->time_to_eat);
-	pthread_mutex_unlock(&philo->right_fork);
-	pthread_mutex_unlock(philo->left_fork);
+	sem_wait(philo->data->forks);
+	sem_wait(philo->data->forks);
 	philo->eaten++;
 }
 
 static void	forks_action(t_philosopher *philo)
 {
-	if (philo->name % 2)
+	sem_wait(philo->data->forks);
+	print(philo, "has taken a fork");
+	if (philo->data->philo_count == 1)
 	{
-		pthread_mutex_lock(&philo->right_fork);
-		print(philo, "has taken a fork");
-		if (&philo->right_fork == philo->left_fork)
-		{
-			ft_usleep(philo->data->time_to_die + 20);
-			return ;
-		}
-		pthread_mutex_lock(philo->left_fork);
-		print(philo, "has taken a fork");
+		ft_usleep(philo->data->time_to_die + 20);
+		return ;
 	}
-	else
-	{
-		pthread_mutex_lock(philo->left_fork);
-		print(philo, "has taken a fork");
-		pthread_mutex_lock(&philo->right_fork);
-		print(philo, "has taken a fork");
-	}
+	sem_wait(philo->data->forks);
+	print(philo, "has taken a fork");
 }
 
-static void	*philosophy(void *args)
+static void	*philosophy(t_philosopher *philo)
 {
-	t_philosopher	*philo;
-	pthread_t		watcher;
-
-	philo = (t_philosopher *)args;
-	if ((philo->name % 2))
-		ft_usleep(philo->data->time_to_eat);
-	pthread_create(&watcher, NULL, watch, philo);
-	pthread_detach(watcher);
 	while (1)
 	{
 		forks_action(philo);
@@ -70,22 +52,36 @@ static void	*philosophy(void *args)
 		if (!philo->data->life_status)
 			break ;
 	}
-	return (NULL);
+	free_philo(&philo);
+	exit(0);
 }
 
-void	create_threads(pthread_t *threads, t_philosopher **philo)
+static void	init_philo(t_data *data, int name)
 {
-	int			index;
-	pthread_t	announcer;
+	t_philosopher	*philo;
+	pthread_t		watcher;
+
+	philo = philo_init(name, data);
+	if ((philo->name % 2))
+		ft_usleep(philo->data->time_to_eat);
+	pthread_create(&watcher, NULL, watch, philo);
+	pthread_detach(watcher);
+	philosophy(philo);
+}
+
+void	create_procs(pid_t *pid_mass, t_data *data, int argc)
+{
+	int	index;
+	int	temp;
 
 	index = 0;
-	pthread_create(&announcer, NULL, dead_announcer, philo[0]->data);
-	pthread_detach(announcer);
-	philo[0]->data->start_time = get_time();
-	while (index < philo[0]->data->philo_count)
+	data->start_time = get_time();
+	while (index < argc)
 	{
-		pthread_create(&threads[index], NULL, philosophy, philo[index]);
+		temp = fork();
+		if (temp == 0)
+			init_philo(data, index);
+		pid_mass[index] = temp;
 		index++;
-		ft_usleep(1);
 	}
 }

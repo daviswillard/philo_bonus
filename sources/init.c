@@ -28,7 +28,7 @@ t_philosopher	*philo_init(int index, t_data *data)
 	return (ret);
 }
 
-t_data	*data_init(int argc, char **argv, t_philosopher **philo)
+t_data	*data_init(int argc, char **argv)
 {
 	t_data	*ret;
 
@@ -44,36 +44,8 @@ t_data	*data_init(int argc, char **argv, t_philosopher **philo)
 		ret->eat_count = ft_atoi(argv[5]);
 	else
 		ret->eat_count = -1;
-	ret->philo = philo;
-	pthread_mutex_init(&ret->writer, NULL);
+	ret->forks = sem_open("forks", O_CREAT, 644, argc);
+	ret->writer = sem_open("write", O_CREAT, 664, 1);
 	ret->is_dead = 0;
 	return (ret);
-}
-
-int	threads_init(t_data *data, t_philosopher **philo)
-{
-	int	index;
-
-	index = -1;
-	while (++index < data->philo_count)
-	{
-		philo[index] = philo_init(index, data);
-		if (!philo[index])
-			return (free_philo(&philo));
-	}
-	index = -1;
-	while (++index < data->philo_count)
-	{
-		if (pthread_mutex_init(&philo[index]->right_fork, NULL))
-			return (mutex_destroyer(index, philo));
-	}
-	index = -1;
-	while (++index < data->philo_count)
-	{
-		if (index == 0)
-			philo[index]->left_fork = &philo[data->philo_count - 1]->right_fork;
-		else
-			philo[index]->left_fork = &philo[index - 1]->right_fork;
-	}
-	return (0);
 }
