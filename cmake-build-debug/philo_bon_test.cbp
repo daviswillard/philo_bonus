@@ -89,7 +89,7 @@
 		<Unit filename="/Users/dwillard/philo_bon_test/sources/main.c">
 			<Option target="philo_bon_test"/>
 		</Unit>
-		<Unit filename="/Users/dwillard/philo_bon_test/sources/threads.c">
+		<Unit filename="/Users/dwillard/philo_bon_test/sources/processes.c">
 			<Option target="philo_bon_test"/>
 		</Unit>
 		<Unit filename="/Users/dwillard/philo_bon_test/sources/utils.c">

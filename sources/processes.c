@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   threads.c                                          :+:      :+:    :+:   */
+/*   processes.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dwillard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 19:59:45 by dwillard          #+#    #+#             */
-/*   Updated: 2021/11/08 19:59:52 by dwillard         ###   ########.fr       */
+/*   Created: 2021/11/19 17:05:17 by dwillard          #+#    #+#             */
+/*   Updated: 2021/11/19 17:05:19 by dwillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@ static void	eat(t_philosopher *philo)
 	philo->last_eat = get_time();
 	print(philo, "is eating");
 	ft_usleep(philo->data->time_to_eat);
-	sem_wait(philo->data->forks);
-	sem_wait(philo->data->forks);
+	sem_post(philo->data->forks);
+	sem_post(philo->data->forks);
 	philo->eaten++;
+//	if (philo->eaten > philo->data)
 }
 
 static void	forks_action(t_philosopher *philo)
@@ -39,17 +40,17 @@ static void	forks_action(t_philosopher *philo)
 
 static void	*philosophy(t_philosopher *philo)
 {
+	t_data	*data;
+
+	data = philo->data;
 	while (1)
 	{
 		forks_action(philo);
 		eat(philo);
-		if ((philo->data->eat_count >= 0 && philo->eaten
-				>= philo->data->eat_count))
-			break ;
 		print(philo, "is sleeping");
 		ft_usleep(philo->data->time_to_sleep);
 		print(philo, "is thinking");
-		if (!philo->data->life_status)
+		if (!data->life_status)
 			break ;
 	}
 	free_philo(&philo);
@@ -69,19 +70,25 @@ static void	init_philo(t_data *data, int name)
 	philosophy(philo);
 }
 
-void	create_procs(pid_t *pid_mass, t_data *data, int argc)
+void	create_procs(pid_t *pid_mass, t_data *data)
 {
 	int	index;
 	int	temp;
 
 	index = 0;
 	data->start_time = get_time();
-	while (index < argc)
+	while (index < data->philo_count)
 	{
 		temp = fork();
 		if (temp == 0)
 			init_philo(data, index);
 		pid_mass[index] = temp;
+		index++;
+	}
+	index = 0;
+	while (index < data->philo_count)
+	{
+		waitpid(index, 0, 0);
 		index++;
 	}
 }

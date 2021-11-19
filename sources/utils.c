@@ -46,7 +46,7 @@ uint64_t	get_time(void)
 
 void	ft_usleep(uint64_t delta_t)
 {
-	unsigned long long	result;
+	uint64_t	result;
 
 	result = get_time() + delta_t;
 	while (get_time() < result)

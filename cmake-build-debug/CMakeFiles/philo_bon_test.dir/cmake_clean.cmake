@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/philo_bon_test.dir/sources/init.c.o"
   "CMakeFiles/philo_bon_test.dir/sources/main.c.o"
-  "CMakeFiles/philo_bon_test.dir/sources/threads.c.o"
+  "CMakeFiles/philo_bon_test.dir/sources/processes.c.o"
   "CMakeFiles/philo_bon_test.dir/sources/utils.c.o"
   "CMakeFiles/philo_bon_test.dir/sources/utils_2.c.o"
   "CMakeFiles/philo_bon_test.dir/sources/watch.c.o"

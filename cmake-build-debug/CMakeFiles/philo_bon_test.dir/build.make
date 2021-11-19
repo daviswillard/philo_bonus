@@ -105,18 +105,18 @@ CMakeFiles/philo_bon_test.dir/sources/init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_bon_test.dir/sources/init.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_bon_test/sources/init.c -o CMakeFiles/philo_bon_test.dir/sources/init.c.s
 
-CMakeFiles/philo_bon_test.dir/sources/threads.c.o: CMakeFiles/philo_bon_test.dir/flags.make
-CMakeFiles/philo_bon_test.dir/sources/threads.c.o: ../sources/threads.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/philo_bon_test.dir/sources/threads.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_bon_test.dir/sources/threads.c.o -c /Users/dwillard/philo_bon_test/sources/threads.c
+CMakeFiles/philo_bon_test.dir/sources/processes.c.o: CMakeFiles/philo_bon_test.dir/flags.make
+CMakeFiles/philo_bon_test.dir/sources/processes.c.o: ../sources/processes.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/philo_bon_test.dir/sources/processes.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_bon_test.dir/sources/processes.c.o -c /Users/dwillard/philo_bon_test/sources/processes.c
 
-CMakeFiles/philo_bon_test.dir/sources/threads.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo_bon_test.dir/sources/threads.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_bon_test/sources/threads.c > CMakeFiles/philo_bon_test.dir/sources/threads.c.i
+CMakeFiles/philo_bon_test.dir/sources/processes.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo_bon_test.dir/sources/processes.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dwillard/philo_bon_test/sources/processes.c > CMakeFiles/philo_bon_test.dir/sources/processes.c.i
 
-CMakeFiles/philo_bon_test.dir/sources/threads.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_bon_test.dir/sources/threads.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_bon_test/sources/threads.c -o CMakeFiles/philo_bon_test.dir/sources/threads.c.s
+CMakeFiles/philo_bon_test.dir/sources/processes.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_bon_test.dir/sources/processes.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dwillard/philo_bon_test/sources/processes.c -o CMakeFiles/philo_bon_test.dir/sources/processes.c.s
 
 CMakeFiles/philo_bon_test.dir/sources/watch.c.o: CMakeFiles/philo_bon_test.dir/flags.make
 CMakeFiles/philo_bon_test.dir/sources/watch.c.o: ../sources/watch.c
@@ -149,7 +149,7 @@ philo_bon_test_OBJECTS = \
 "CMakeFiles/philo_bon_test.dir/sources/main.c.o" \
 "CMakeFiles/philo_bon_test.dir/sources/utils.c.o" \
 "CMakeFiles/philo_bon_test.dir/sources/init.c.o" \
-"CMakeFiles/philo_bon_test.dir/sources/threads.c.o" \
+"CMakeFiles/philo_bon_test.dir/sources/processes.c.o" \
 "CMakeFiles/philo_bon_test.dir/sources/watch.c.o" \
 "CMakeFiles/philo_bon_test.dir/sources/utils_2.c.o"
 
@@ -159,7 +159,7 @@ philo_bon_test_EXTERNAL_OBJECTS =
 philo_bon_test: CMakeFiles/philo_bon_test.dir/sources/main.c.o
 philo_bon_test: CMakeFiles/philo_bon_test.dir/sources/utils.c.o
 philo_bon_test: CMakeFiles/philo_bon_test.dir/sources/init.c.o
-philo_bon_test: CMakeFiles/philo_bon_test.dir/sources/threads.c.o
+philo_bon_test: CMakeFiles/philo_bon_test.dir/sources/processes.c.o
 philo_bon_test: CMakeFiles/philo_bon_test.dir/sources/watch.c.o
 philo_bon_test: CMakeFiles/philo_bon_test.dir/sources/utils_2.c.o
 philo_bon_test: CMakeFiles/philo_bon_test.dir/build.make

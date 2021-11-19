@@ -26,7 +26,6 @@ typedef struct s_data
 	int				eat_count;
 	int				life_status;
 	int				is_dead;
-	void			*philo;
 	uint64_t		time_to_sleep;
 	uint64_t		time_to_die;
 	uint64_t		time_to_eat;
@@ -40,8 +39,6 @@ typedef struct s_philosopher
 	int				name;
 	int				eaten;
 	uint64_t		last_eat;
-	pthread_mutex_t	*left_fork;
-	pthread_mutex_t	right_fork;
 	t_data			*data;
 }t_philosopher;
 
@@ -61,9 +58,7 @@ t_philosopher	*philo_init(int index, t_data *data);
 
 void			*watch(void *args);
 
-void			create_procs(pid_t *pid_mass, t_data *data, int argc);
-
-void			*dead_announcer(void *args);
+void			create_procs(pid_t *pid_mass, t_data *data);
 
 t_data			*data_init(int argc, char **argv);
 

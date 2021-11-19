@@ -36,12 +36,10 @@ void	start(int argc, char **argv)
 	pid_mass = malloc(sizeof(pid_t *) * argc);
 	if (!pid_mass || !data)
 	{
-		sem_unlink("forks");
-		sem_unlink("write");
 		free_that(&data, pid_mass);
 		exit(0);
 	}
-	create_procs(pid_mass, data, argc);
+	create_procs(pid_mass, data);
 }
 
 int	main(int argc, char **argv)

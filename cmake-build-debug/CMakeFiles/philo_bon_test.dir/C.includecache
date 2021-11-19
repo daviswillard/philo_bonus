@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../philo.h
+stdlib.h
+-
+pthread.h
+-
+sys/time.h
+-
+unistd.h
+-
+stdio.h
+-
+semaphore.h
+-
+
+/Users/dwillard/philo_bon_test/sources/processes.c
+philo.h
+-
+
+/Users/dwillard/philo_bon_test/sources/utils_2.c
+philo.h
+-
+

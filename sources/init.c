@@ -44,7 +44,9 @@ t_data	*data_init(int argc, char **argv)
 		ret->eat_count = ft_atoi(argv[5]);
 	else
 		ret->eat_count = -1;
+	sem_unlink("forks");
 	ret->forks = sem_open("forks", O_CREAT, 644, argc);
+	sem_unlink("write");
 	ret->writer = sem_open("write", O_CREAT, 664, 1);
 	ret->is_dead = 0;
 	return (ret);

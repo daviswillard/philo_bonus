@@ -177,29 +177,29 @@ sources/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/main.c.s
 .PHONY : sources/main.c.s
 
-sources/threads.o: sources/threads.c.o
-.PHONY : sources/threads.o
+sources/processes.o: sources/processes.c.o
+.PHONY : sources/processes.o
 
 # target to build an object file
-sources/threads.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/threads.c.o
-.PHONY : sources/threads.c.o
+sources/processes.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/processes.c.o
+.PHONY : sources/processes.c.o
 
-sources/threads.i: sources/threads.c.i
-.PHONY : sources/threads.i
+sources/processes.i: sources/processes.c.i
+.PHONY : sources/processes.i
 
 # target to preprocess a source file
-sources/threads.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/threads.c.i
-.PHONY : sources/threads.c.i
+sources/processes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/processes.c.i
+.PHONY : sources/processes.c.i
 
-sources/threads.s: sources/threads.c.s
-.PHONY : sources/threads.s
+sources/processes.s: sources/processes.c.s
+.PHONY : sources/processes.s
 
 # target to generate assembly for a file
-sources/threads.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/threads.c.s
-.PHONY : sources/threads.c.s
+sources/processes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_bon_test.dir/build.make CMakeFiles/philo_bon_test.dir/sources/processes.c.s
+.PHONY : sources/processes.c.s
 
 sources/utils.o: sources/utils.c.o
 .PHONY : sources/utils.o
@@ -288,9 +288,9 @@ help:
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"
-	@echo "... sources/threads.o"
-	@echo "... sources/threads.i"
-	@echo "... sources/threads.s"
+	@echo "... sources/processes.o"
+	@echo "... sources/processes.i"
+	@echo "... sources/processes.s"
 	@echo "... sources/utils.o"
 	@echo "... sources/utils.i"
 	@echo "... sources/utils.s"

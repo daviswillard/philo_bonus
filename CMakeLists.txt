@@ -12,4 +12,4 @@ add_executable(
         philo_bon_test
         sources/main.c
         philo.h
-        sources/utils.c sources/init.c sources/threads.c sources/watch.c sources/utils_2.c)
+        sources/utils.c sources/init.c sources/processes.c sources/watch.c sources/utils_2.c)

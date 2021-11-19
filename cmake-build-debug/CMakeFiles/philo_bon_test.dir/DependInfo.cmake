@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/dwillard/philo_bon_test/sources/init.c" "/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles/philo_bon_test.dir/sources/init.c.o"
   "/Users/dwillard/philo_bon_test/sources/main.c" "/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles/philo_bon_test.dir/sources/main.c.o"
-  "/Users/dwillard/philo_bon_test/sources/threads.c" "/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles/philo_bon_test.dir/sources/threads.c.o"
+  "/Users/dwillard/philo_bon_test/sources/processes.c" "/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles/philo_bon_test.dir/sources/processes.c.o"
   "/Users/dwillard/philo_bon_test/sources/utils.c" "/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles/philo_bon_test.dir/sources/utils.c.o"
   "/Users/dwillard/philo_bon_test/sources/utils_2.c" "/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles/philo_bon_test.dir/sources/utils_2.c.o"
   "/Users/dwillard/philo_bon_test/sources/watch.c" "/Users/dwillard/philo_bon_test/cmake-build-debug/CMakeFiles/philo_bon_test.dir/sources/watch.c.o"

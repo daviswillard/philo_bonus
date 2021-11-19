@@ -6,7 +6,7 @@
 #    By: dwillard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/08 20:05:03 by dwillard          #+#    #+#              #
-#    Updated: 2021/11/08 20:05:05 by dwillard         ###   ########.fr        #
+#    Updated: 2021/11/19 17:07:56 by dwillard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ FLAGS = -Wall -Wextra -Werror -MMD
 
 SRC_DIR = sources/
 
-SRCS = $(SRC_DIR)main.c $(SRC_DIR)init.c $(SRC_DIR)threads.c \
+SRCS = $(SRC_DIR)main.c $(SRC_DIR)init.c $(SRC_DIR)processes.c \
 		$(SRC_DIR)utils.c $(SRC_DIR)watch.c $(SRC_DIR)utils_2.c
 
 OBJS = ${SRCS:.c=.o}
