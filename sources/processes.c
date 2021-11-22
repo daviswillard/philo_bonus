@@ -6,7 +6,7 @@
 /*   By: dwillard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:05:17 by dwillard          #+#    #+#             */
-/*   Updated: 2021/11/19 17:05:19 by dwillard         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:47:25 by dwillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,13 +82,13 @@ void	create_procs(pid_t *pid_mass, t_data *data)
 		temp = fork();
 		if (temp == 0)
 			init_philo(data, index);
+		else if (temp < 0)
+			break ;
 		pid_mass[index] = temp;
 		index++;
 	}
-	index = 0;
-	while (index < data->philo_count)
-	{
-		waitpid(index, 0, 0);
-		index++;
-	}
+	if (temp < 0)
+		kill_all(pid_mass, NULL);
+	waitpid(0, 0, 0);
+	kill_all(pid_mass, data);
 }

@@ -6,7 +6,7 @@
 /*   By: dwillard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:59:18 by dwillard          #+#    #+#             */
-/*   Updated: 2021/11/08 20:02:51 by dwillard         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:02:26 by dwillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ t_data	*data_init(int argc, char **argv)
 	else
 		ret->eat_count = -1;
 	sem_unlink("forks");
-	ret->forks = sem_open("forks", O_CREAT, 644, argc);
+	ret->forks = sem_open("forks", O_CREAT, 644, ret->philo_count);
 	sem_unlink("write");
 	ret->writer = sem_open("write", O_CREAT, 664, 1);
 	ret->is_dead = 0;

@@ -6,7 +6,7 @@
 /*   By: dwillard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 20:01:34 by dwillard          #+#    #+#             */
-/*   Updated: 2021/11/08 20:01:36 by dwillard         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:49:20 by dwillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 # define PHILO_H
 
 # include <stdlib.h>
+# include <string.h>
 # include <pthread.h>
 # include <sys/time.h>
 # include <unistd.h>
 # include <stdio.h>
 # include <semaphore.h>
+# include <signal.h>
 
 typedef struct s_data
 {
@@ -46,8 +48,6 @@ int				ft_atoi(const char *str);
 
 uint64_t		get_time(void);
 
-int				free_that(void *this, void *that);
-
 int				free_philo(t_philosopher **philo);
 
 void			print(t_philosopher *philo, char *message);
@@ -61,5 +61,7 @@ void			*watch(void *args);
 void			create_procs(pid_t *pid_mass, t_data *data);
 
 t_data			*data_init(int argc, char **argv);
+
+void			kill_all(pid_t *pid_mass, void *data);
 
 #endif

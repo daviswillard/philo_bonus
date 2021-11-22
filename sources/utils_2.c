@@ -20,3 +20,26 @@ int	free_philo(t_philosopher **philo)
 	philo = NULL;
 	return (0);
 }
+
+void	kill_all(pid_t *pid_mass, void *data)
+{
+	int		index;
+	t_data	*datas;
+
+	index = 0;
+	if (data)
+	{
+		datas = (t_data *)data;
+		while (index < datas->philo_count)
+		{
+			kill(pid_mass[index], SIGTERM);
+			index++;
+		}
+	}
+	else
+		while (pid_mass[index])
+		{
+			kill(pid_mass[index], SIGTERM);
+			index++;
+		}
+}

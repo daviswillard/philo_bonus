@@ -33,13 +33,21 @@ void	start(int argc, char **argv)
 	pid_t	*pid_mass;
 
 	data = data_init(argc, argv);
-	pid_mass = malloc(sizeof(pid_t *) * argc);
+	pid_mass = malloc(sizeof(pid_t *) * ft_atoi(argv[1]));
 	if (!pid_mass || !data)
 	{
-		free_that(&data, pid_mass);
+		free(data);
+		free(pid_mass);
+		sem_unlink("writer");
+		sem_unlink("forks");
 		exit(0);
 	}
+	memset(pid_mass, 0, sizeof(pid_t) * data->philo_count);
 	create_procs(pid_mass, data);
+	sem_unlink("writer");
+	sem_unlink("forks");
+	free(data);
+	free(pid_mass);
 }
 
 int	main(int argc, char **argv)

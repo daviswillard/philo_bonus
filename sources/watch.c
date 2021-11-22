@@ -12,13 +12,14 @@
 
 #include <philo.h>
 
-static void	destroy_exit(t_data *data)
+static void	destroy_exit(t_philosopher *philo)
 {
-	sem_close(data->writer);
-	sem_close(data->forks);
-	exit(1);
-}
+	t_data	*data;
 
+	data = philo->data;
+	free_philo(&philo);
+	exit(0);
+}
 void	*watch(void *args)
 {
 	t_philosopher	*arg;
@@ -29,15 +30,15 @@ void	*watch(void *args)
 	while (1)
 	{
 		if (arg->data->eat_count >= 0 && arg->eaten >= arg->data->eat_count)
-			destroy_exit(arg->data);
+			destroy_exit(arg);
 		if (get_time() > arg->last_eat + arg->data->time_to_die)
 		{
-			arg->data->life_status = 0;
 			arg->data->is_dead = arg->name;
 			time = get_time() - arg->data->start_time;
 			sem_wait(arg->data->writer);
 			printf("%6llu philosopher %d is dead\n", time, arg->data->is_dead);
-			destroy_exit(arg->data);
+			free_philo(&arg);
+			exit(0);
 		}
 		ft_usleep(5);
 	}
