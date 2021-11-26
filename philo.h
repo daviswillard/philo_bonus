@@ -6,7 +6,7 @@
 /*   By: dwillard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 20:01:34 by dwillard          #+#    #+#             */
-/*   Updated: 2021/11/22 14:49:20 by dwillard         ###   ########.fr       */
+/*   Updated: 2021/11/23 12:54:49 by dwillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ void			ft_usleep(uint64_t delta_t);
 t_philosopher	*philo_init(int index, t_data *data);
 
 void			*watch(void *args);
+
+void			eat_func(int temp);
 
 void			create_procs(pid_t *pid_mass, t_data *data);
 

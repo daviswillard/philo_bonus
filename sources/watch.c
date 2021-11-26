@@ -12,14 +12,6 @@
 
 #include <philo.h>
 
-static void	destroy_exit(t_philosopher *philo)
-{
-	t_data	*data;
-
-	data = philo->data;
-	free_philo(&philo);
-	exit(0);
-}
 void	*watch(void *args)
 {
 	t_philosopher	*arg;
@@ -30,7 +22,10 @@ void	*watch(void *args)
 	while (1)
 	{
 		if (arg->data->eat_count >= 0 && arg->eaten >= arg->data->eat_count)
-			destroy_exit(arg);
+		{
+			free_philo(&arg);
+			exit(0);
+		}
 		if (get_time() > arg->last_eat + arg->data->time_to_die)
 		{
 			arg->data->is_dead = arg->name;

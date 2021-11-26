@@ -6,7 +6,7 @@
 /*   By: dwillard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:05:17 by dwillard          #+#    #+#             */
-/*   Updated: 2021/11/22 14:47:25 by dwillard         ###   ########.fr       */
+/*   Updated: 2021/11/23 12:54:56 by dwillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,11 @@ static void	eat(t_philosopher *philo)
 	sem_post(philo->data->forks);
 	sem_post(philo->data->forks);
 	philo->eaten++;
-//	if (philo->eaten > philo->data)
+	if (philo->eaten > philo->data->eat_count && philo->data->eat_count > 0)
+	{
+		free_philo(&philo);
+		exit(1);
+	}
 }
 
 static void	forks_action(t_philosopher *philo)
@@ -84,11 +88,15 @@ void	create_procs(pid_t *pid_mass, t_data *data)
 			init_philo(data, index);
 		else if (temp < 0)
 			break ;
+		ft_usleep(1);
 		pid_mass[index] = temp;
 		index++;
 	}
 	if (temp < 0)
+	{
 		kill_all(pid_mass, NULL);
-	waitpid(0, 0, 0);
+		return ;
+	}
+	eat_func(data->philo_count);
 	kill_all(pid_mass, data);
 }

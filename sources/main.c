@@ -27,6 +27,15 @@ int	parse_args(int argc, char **argv)
 	return (0);
 }
 
+static void	earlier_exit(pid_t *pid_mass, t_data *data)
+{
+	free(data);
+	free(pid_mass);
+	sem_unlink("writer");
+	sem_unlink("forks");
+	exit(0);
+}
+
 void	start(int argc, char **argv)
 {
 	t_data	*data;
@@ -35,19 +44,10 @@ void	start(int argc, char **argv)
 	data = data_init(argc, argv);
 	pid_mass = malloc(sizeof(pid_t *) * ft_atoi(argv[1]));
 	if (!pid_mass || !data)
-	{
-		free(data);
-		free(pid_mass);
-		sem_unlink("writer");
-		sem_unlink("forks");
-		exit(0);
-	}
-	memset(pid_mass, 0, sizeof(pid_t) * data->philo_count);
+		earlier_exit(pid_mass, data);
+	memset(pid_mass, 0, sizeof(pid_t *) * data->philo_count);
 	create_procs(pid_mass, data);
-	sem_unlink("writer");
-	sem_unlink("forks");
-	free(data);
-	free(pid_mass);
+	earlier_exit(pid_mass, data);
 }
 
 int	main(int argc, char **argv)
