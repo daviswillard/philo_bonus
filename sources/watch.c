@@ -21,11 +21,6 @@ void	*watch(void *args)
 	arg->last_eat = arg->data->start_time;
 	while (1)
 	{
-		if (arg->data->eat_count >= 0 && arg->eaten >= arg->data->eat_count)
-		{
-			free_philo(&arg);
-			exit(0);
-		}
 		if (get_time() > arg->last_eat + arg->data->time_to_die)
 		{
 			arg->data->is_dead = arg->name;

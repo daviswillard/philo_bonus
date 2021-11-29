@@ -45,9 +45,9 @@ t_data	*data_init(int argc, char **argv)
 	else
 		ret->eat_count = -1;
 	sem_unlink("forks");
-	ret->forks = sem_open("forks", O_CREAT, 644, ret->philo_count);
+	ret->forks = sem_open("forks", O_CREAT, 0644, ret->philo_count);
 	sem_unlink("writer");
-	ret->writer = sem_open("write", O_CREAT, 664, 1);
+	ret->writer = sem_open("write", O_CREAT, 0644, 1);
 	ret->is_dead = 0;
 	return (ret);
 }
