@@ -26,7 +26,7 @@ void	*watch(void *args)
 			arg->data->is_dead = arg->name;
 			time = get_time() - arg->data->start_time;
 			sem_wait(arg->data->writer);
-			printf("%6llu philosopher %d is dead\n", time, arg->data->is_dead);
+			printf("%6lu philosopher %d is dead\n", time, arg->data->is_dead);
 			free_philo(&arg);
 			exit(0);
 		}

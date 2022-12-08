@@ -1,0 +1,3 @@
+[submodule "philothreads"]
+	path = philothreads
+	url = https://github.com/daviswillard/philothreads.git
