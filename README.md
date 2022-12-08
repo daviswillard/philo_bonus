@@ -21,6 +21,13 @@ a philosopher dies of starvation.<br /><br />
 • Philosophers don’t speak with each other.<br /><br />
 • Philosophers don’t know if another philosopher is about to die.<br /><br />
 
+### The specific rules for the bonus part are:<br />
+• All the forks are put in the middle of the table.<br /><br />
+• They have no states in memory but the number of available forks is represented by
+a semaphore.<br /><br />
+• Each philosopher should be a process. But the main process should not be a
+philosopher.<br /><br />
+
 ### How to start:
 Program should take the following arguments:<br /><br />
 number_of_philosophers time_to_die time_to_eat time_to_sleep
