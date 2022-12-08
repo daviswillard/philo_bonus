@@ -13,6 +13,11 @@
 #ifndef PHILO_H
 # define PHILO_H
 
+/*Artix gcc-12 flags*/
+# include <stdint.h>
+# include <fcntl.h>
+# include <sys/wait.h>
+
 # include <stdlib.h>
 # include <string.h>
 # include <pthread.h>

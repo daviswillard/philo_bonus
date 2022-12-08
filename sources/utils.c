@@ -60,6 +60,6 @@ void	print(t_philosopher *philo, char *message)
 	if (!philo->data->life_status)
 		return ;
 	sem_wait(writer);
-	printf("%6llu philosopher %d %s\n", time, name, message);
+	printf("%6lu philosopher %d %s\n", time, name, message);
 	sem_post(writer);
 }
